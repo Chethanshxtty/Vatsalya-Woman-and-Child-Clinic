@@ -2,7 +2,16 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Phone, CalendarCheck, Clock } from 'lucide-react';
 
+/**
+ * Booking Component
+ * Explains the 3-step phone-only booking process.
+ * Contains:
+ * - Connecting dotted lines between steps (rendered absolutely on desktop)
+ * - Dynamic card entries using staggered entrance delays
+ * - Final call button CTA that triggers tel: links
+ */
 export default function Booking() {
+  // Ordered array of actions required for patient bookings
   const steps = [
     {
       number: '1',
@@ -51,7 +60,7 @@ export default function Booking() {
         {/* Steps Flow Grid */}
         <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Connector line (desktop only) */}
+          {/* Connector line (visible only on desktop grid layouts) */}
           <div className="hidden md:block absolute top-1/3 left-1/6 right-1/6 h-0.5 border-t border-dashed border-brand-sage/40 -z-10" />
 
           {steps.map((step, idx) => {
@@ -65,7 +74,7 @@ export default function Booking() {
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
                 className="card-soft bg-brand-cream-light p-8 text-center space-y-4 hover:shadow-md transition-shadow duration-300 relative"
               >
-                {/* Number Badge */}
+                {/* Step numbering circle positioned top-left */}
                 <div className="absolute top-4 left-4 w-7.5 h-7.5 rounded-full bg-white flex items-center justify-center font-heading font-bold text-sm text-brand-charcoal shadow-sm border border-brand-cream-dark">
                   {step.number}
                 </div>
@@ -86,7 +95,7 @@ export default function Booking() {
           })}
         </div>
 
-        {/* Re-highlighting CTA buttons */}
+        {/* Direct Booking Phone Trigger */}
         <motion.div 
           className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6"
           initial={{ opacity: 0, y: 20 }}

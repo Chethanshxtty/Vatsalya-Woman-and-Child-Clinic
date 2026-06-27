@@ -2,7 +2,15 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Navigation, Calendar } from 'lucide-react';
 
+/**
+ * Location Component
+ * Features:
+ * - A detailed contact info card containing working hours and address details
+ * - A responsive Google Maps iframe showing the physical clinic location
+ * - A "Get Directions" button that opens navigation to the clinic
+ */
 export default function Location() {
+  // Query parameters formatted for Google Maps embed and direction actions
   const addressQuery = "Vatsalya Woman and Child Clinic Balmatta Rd Mallikatte Kadri Mangaluru Karnataka 575001";
   const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(addressQuery)}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(addressQuery)}`;
@@ -28,10 +36,10 @@ export default function Location() {
           <div className="w-16 h-1 bg-brand-blush mx-auto rounded-full mt-2" />
         </div>
 
-        {/* Content Box */}
+        {/* Content Box Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* Info Side */}
+          {/* Info Card Column */}
           <motion.div 
             className="lg:col-span-4 flex flex-col justify-between p-8 bg-white card-soft gap-8"
             initial={{ opacity: 0, x: -30 }}
@@ -40,7 +48,7 @@ export default function Location() {
             transition={{ duration: 0.8 }}
           >
             <div className="space-y-6">
-              {/* Address details */}
+              {/* Address detail sub block */}
               <div className="flex gap-4">
                 <div className="w-10 h-10 rounded-full bg-brand-blush-light text-brand-blush-dark flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
@@ -55,7 +63,7 @@ export default function Location() {
                 </div>
               </div>
 
-              {/* Clinic Timings */}
+              {/* Clinic Timings sub block: split into morning and evening sessions */}
               <div className="flex gap-4">
                 <div className="w-10 h-10 rounded-full bg-brand-sage-light text-brand-sage-dark flex items-center justify-center shrink-0">
                   <Calendar className="w-5 h-5" />
@@ -80,7 +88,7 @@ export default function Location() {
               </div>
             </div>
 
-            {/* Directions button */}
+            {/* Outbound navigation action button */}
             <a
               href={directionsUrl}
               target="_blank"
@@ -92,7 +100,7 @@ export default function Location() {
             </a>
           </motion.div>
 
-          {/* Map Side */}
+          {/* Map Embed Column: Renders the standard Google Maps output in absolute viewport */}
           <motion.div 
             className="lg:col-span-8 overflow-hidden rounded-[24px] shadow-lg border border-white relative min-h-[300px] sm:min-h-[400px]"
             initial={{ opacity: 0, x: 30 }}

@@ -2,7 +2,14 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Star, MessageSquareCode, ArrowUpRight } from 'lucide-react';
 
+/**
+ * Reviews Component
+ * Displays real clinical review summaries (paraphrased to protect privacy)
+ * detailing experiences from expectant mothers, pediatric patients, and general gynecological care.
+ * Displays overall Google reviews badge and outbound link to Google search listings.
+ */
 export default function Reviews() {
+  // Paraphrased clinical testimonials representing core care themes
   const reviews = [
     {
       author: 'A Happy Mother',
@@ -39,7 +46,7 @@ export default function Reviews() {
             </p>
           </div>
 
-          {/* Rating Badge */}
+          {/* Aggregate Rating Score and Stars representation */}
           <div className="flex flex-col items-center md:items-end gap-2 shrink-0">
             <div className="flex items-center gap-2">
               <span className="text-3xl font-extrabold text-brand-charcoal">4.7</span>
@@ -64,7 +71,7 @@ export default function Reviews() {
           </div>
         </div>
 
-        {/* Review Cards Grid */}
+        {/* Testimonial Cards Layout Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((rev, idx) => (
             <motion.div
@@ -75,13 +82,13 @@ export default function Reviews() {
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               className="card-soft bg-white p-8 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 relative"
             >
-              {/* Quote Mark Watermark */}
+              {/* Overlay Quote Graphic for aesthetics */}
               <div className="absolute top-6 right-8 text-brand-blush-light select-none pointer-events-none">
                 <MessageSquareCode className="w-8 h-8 opacity-40" />
               </div>
 
               <div className="space-y-4 relative z-10">
-                {/* Individual Rating */}
+                {/* Renders star icons list */}
                 <div className="flex text-amber-400 gap-0.5">
                   {[...Array(rev.stars)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-current stroke-current" />
