@@ -1,8 +1,16 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, Heart, Baby, Check } from 'lucide-react';
+import { Heart, Baby } from 'lucide-react';
 
+/**
+ * Services Component
+ * Renders the healthcare specialties offered by the clinic.
+ * Divided clearly into two distinct columns to avoid mixing specialties:
+ * 1. Women's Health (Pink accent colors and icons)
+ * 2. Child Care (Sage green accent colors and icons)
+ */
 export default function Services() {
+  // Gynecology and Pregnancy-related offerings
   const womensHealthServices = [
     {
       title: 'Gynecology Consultation',
@@ -22,6 +30,7 @@ export default function Services() {
     },
   ];
 
+  // Pediatric-related offerings
   const childCareServices = [
     {
       title: 'Pediatric Checkups',
@@ -62,7 +71,7 @@ export default function Services() {
           <div className="w-16 h-1 bg-brand-blush mx-auto rounded-full mt-2" />
         </div>
 
-        {/* Services Columns */}
+        {/* Split Grid: Separates the specialties visually using pink and sage green accents */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
           {/* Column 1: Women's Health (Pink Accent) */}
@@ -73,7 +82,7 @@ export default function Services() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.8 }}
           >
-            {/* Column Header */}
+            {/* Header for Women's Health Wing */}
             <div className="flex items-center gap-3 bg-brand-blush-light p-4 rounded-2xl border border-brand-blush/20">
               <div className="w-12 h-12 rounded-xl bg-brand-blush flex items-center justify-center text-white shadow-sm">
                 <Heart className="w-6 h-6 fill-white" />
@@ -84,7 +93,7 @@ export default function Services() {
               </div>
             </div>
 
-            {/* Services List */}
+            {/* Grid of subservices */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {womensHealthServices.map((service, index) => (
                 <div 
@@ -110,7 +119,7 @@ export default function Services() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.8 }}
           >
-            {/* Column Header */}
+            {/* Header for Child Care Wing */}
             <div className="flex items-center gap-3 bg-brand-sage-light p-4 rounded-2xl border border-brand-sage/20">
               <div className="w-12 h-12 rounded-xl bg-brand-sage flex items-center justify-center text-white shadow-sm">
                 <Baby className="w-6 h-6 fill-white" />
@@ -121,7 +130,7 @@ export default function Services() {
               </div>
             </div>
 
-            {/* Services List */}
+            {/* Grid of subservices */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {childCareServices.map((service, index) => (
                 <div 

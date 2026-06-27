@@ -2,7 +2,14 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Award, HeartHandshake, Users, Sparkles } from 'lucide-react';
 
+/**
+ * About Component
+ * Introduces the clinic's core philosophy and approach to medical care.
+ * Displays 4 animated trust badges built with Lucide icons that reflect real
+ * feedback themes: Experience, Kindness, Family Trust, and Clear Communication.
+ */
 export default function About() {
+  // Trust indicators derived from actual patient review feedback themes
   const trustBadges = [
     {
       icon: Award,
@@ -38,7 +45,7 @@ export default function About() {
     <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-brand-cream-dark">
       <div className="max-w-6xl mx-auto space-y-16">
         
-        {/* Section Heading & Text */}
+        {/* Section Header with single-time viewport entry triggers */}
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -67,7 +74,7 @@ export default function About() {
           </motion.p>
         </div>
 
-        {/* Trust Badges Grid */}
+        {/* Staggered Grid: Renders the trust cards with incrementing transition delays */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {trustBadges.map((badge, idx) => {
             const Icon = badge.icon;
