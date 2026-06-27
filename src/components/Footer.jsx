@@ -36,8 +36,8 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-brand-cream/80 font-light">
               <li className="flex items-center gap-2">
                 <Phone className="w-4.5 h-4.5 text-brand-sage shrink-0" />
-                <a href="tel:09482062584" className="hover:text-brand-blush transition-colors duration-200">
-                  094820 62584
+                <a href="tel:+919482062584" className="hover:text-brand-blush transition-colors duration-200">
+                  94820 62584
                 </a>
               </li>
               <li className="flex items-start gap-2">
@@ -71,11 +71,11 @@ export default function Footer() {
           <span className="text-sm text-brand-cream/60 mb-2 sm:mb-0">Ready to consult?</span>
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <a
-              href="tel:09482062584"
+              href="tel:+919482062584"
               className="btn-soft inline-flex items-center justify-center gap-2 bg-brand-blush hover:bg-brand-blush-dark text-white px-6 py-3 cursor-pointer text-sm font-semibold text-center"
             >
               <Phone className="w-4 h-4 fill-white" />
-              Call 094820 62584
+              Call 94820 62584
             </a>
           </div>
         </div>

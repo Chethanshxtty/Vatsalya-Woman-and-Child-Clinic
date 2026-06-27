@@ -23,7 +23,7 @@ export default function Header() {
 
         {/* CTA Call Now Button */}
         <a
-          href="tel:09482062584"
+          href="tel:+919482062584"
           className="btn-soft inline-flex items-center gap-2 bg-brand-blush hover:bg-brand-blush-dark text-white px-5 py-2.5 shadow-md shadow-brand-blush/20 hover:shadow-lg hover:shadow-brand-blush/30 text-sm sm:text-base cursor-pointer"
           aria-label="Call Vatsalya Clinic to book an appointment"
         >

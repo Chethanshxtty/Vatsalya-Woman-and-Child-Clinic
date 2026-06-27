@@ -95,7 +95,7 @@ export default function Booking() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <a
-            href="tel:09482062584"
+            href="tel:+919482062584"
             className="w-full sm:w-auto btn-soft inline-flex items-center justify-center gap-3 bg-brand-blush hover:bg-brand-blush-dark text-white px-8 py-4.5 shadow-lg shadow-brand-blush/25 hover:shadow-xl cursor-pointer text-base font-semibold"
           >
             <Phone className="w-4.5 h-4.5 fill-white" />

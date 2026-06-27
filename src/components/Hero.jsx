@@ -48,7 +48,7 @@ export default function Hero() {
           {/* CTA Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <a
-              href="tel:09482062584"
+              href="tel:+919482062584"
               className="w-full sm:w-auto btn-soft inline-flex items-center justify-center gap-3 bg-brand-blush hover:bg-brand-blush-dark text-white px-8 py-4 shadow-lg shadow-brand-blush/25 hover:shadow-xl cursor-pointer text-base sm:text-lg"
             >
               <Phone className="w-5 h-5 fill-white" />
