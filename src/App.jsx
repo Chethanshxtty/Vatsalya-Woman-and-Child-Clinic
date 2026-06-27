@@ -9,19 +9,25 @@ import Booking from './components/Booking';
 import Location from './components/Location';
 import Footer from './components/Footer';
 
+/**
+ * App Layout Wrapper
+ * Assembles the single-page landing layout and injects blurred ambient gradient blobs 
+ * into the background layer to implement our warm, organic aesthetic theme.
+ */
 export default function App() {
   return (
     <div className="relative min-h-screen bg-brand-cream text-brand-charcoal overflow-x-hidden selection:bg-brand-blush-light selection:text-brand-blush-dark pb-16 sm:pb-0">
       
-      {/* Background Soft Blurry Gradient Blobs */}
+      {/* Background Soft Blurry Gradient Blobs acting as visual accents */}
       <div className="absolute top-[10%] left-[-10%] w-[50vw] h-[50vw] max-w-[600px] rounded-full bg-brand-blush/10 blob-gradient -z-20" />
       <div className="absolute top-[35%] right-[-10%] w-[45vw] h-[45vw] max-w-[500px] rounded-full bg-brand-sage/10 blob-gradient -z-20" />
       <div className="absolute top-[60%] left-[-5%] w-[40vw] h-[40vw] max-w-[450px] rounded-full bg-brand-blush/8 blob-gradient -z-20" />
       <div className="absolute top-[80%] right-[10%] w-[35vw] h-[35vw] max-w-[400px] rounded-full bg-brand-sage/8 blob-gradient -z-20" />
 
-      {/* Main Layout Elements */}
+      {/* Navigation section */}
       <Header />
       
+      {/* Main section blocks */}
       <main>
         <Hero />
         <About />
@@ -31,9 +37,10 @@ export default function App() {
         <Location />
       </main>
 
+      {/* Footer contacts block */}
       <Footer />
 
-      {/* Sticky Bottom Actions Bar (Mobile Only) */}
+      {/* Sticky Bottom Actions Bar (Mobile Only: handles touch-click calls) */}
       <MobileBottomBar />
 
     </div>

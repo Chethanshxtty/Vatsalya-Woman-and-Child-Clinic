@@ -1,14 +1,24 @@
 import { Heart, Phone, MapPin, Clock } from 'lucide-react';
 
+/**
+ * Footer Component
+ * Renders the primary bottom section of the landing page.
+ * Includes:
+ * - Brand description
+ * - Directly accessible contact phone numbers and physical address
+ * - Split morning and evening clinic timings
+ * - Final booking call button action
+ * - Mandatory appointment timings disclaimer and copyright year calculations
+ */
 export default function Footer() {
   return (
     <footer className="bg-brand-charcoal text-white pt-16 pb-24 sm:pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-12">
         
-        {/* Upper Grid Layout */}
+        {/* Upper Contact Details Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           
-          {/* Brand Info */}
+          {/* Column 1: Brand Info and summary description */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-brand-blush/20 flex items-center justify-center text-brand-blush">
@@ -29,7 +39,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Contact Details */}
+          {/* Column 2: Direct Contact link items */}
           <div className="md:col-span-4 space-y-4">
             <h4 className="font-heading font-bold text-base text-brand-blush">Contact Us</h4>
             
@@ -47,7 +57,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Timings Details */}
+          {/* Column 3: Split operation hours */}
           <div className="md:col-span-3 space-y-4">
             <h4 className="font-heading font-bold text-base text-brand-blush">Clinic Timings</h4>
             
@@ -66,7 +76,7 @@ export default function Footer() {
 
         </div>
 
-        {/* Final CTA buttons */}
+        {/* Final call to action booking trigger */}
         <div className="border-t border-brand-cream/10 pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <span className="text-sm text-brand-cream/60 mb-2 sm:mb-0">Ready to consult?</span>
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
@@ -80,7 +90,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Disclaimer and copyright */}
+        {/* Clinic booking confirmation notice and automatic copyright year */}
         <div className="border-t border-brand-cream/10 pt-8 text-center space-y-4">
           <p className="text-xs text-brand-cream/50 max-w-2xl mx-auto leading-relaxed">
             <span className="font-semibold text-brand-blush">Disclaimer:</span> Please call to confirm appointment availability and timings. This website is for informational purposes and does not substitute professional medical advice, diagnosis, or emergency treatments.
