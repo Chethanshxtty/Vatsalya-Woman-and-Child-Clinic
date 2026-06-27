@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Quicksand", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* Nurturing, warm pastel palette */
+  --color-brand-cream: #FCFAF7;
+  --color-brand-cream-dark: #FAF5EE;
+  --color-brand-blush: #F5A396;
+  --color-brand-blush-light: #FFF0ED;
+  --color-brand-blush-dark: #DE7D71;
+  --color-brand-sage: #9BBFA2;
+  --color-brand-sage-light: #F0F6F2;
+  --color-brand-sage-dark: #6D8E73;
+  --color-brand-charcoal: #3D3534;
+  --color-brand-charcoal-light: #615857;
+  --color-brand-rose: #FFF5F4;
+}
+
+/* Base resets & typography */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-charcoal);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-brand-charcoal);
+}
+
+/* Custom micro-animations and background styling helper */
+.blob-gradient {
+  filter: blur(100px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Generously rounded corners and soft drop shadows */
+.card-soft {
+  border-radius: 24px;
+  box-shadow: 0 10px 30px -10px rgba(61, 53, 52, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-soft {
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
