@@ -1,16 +1,40 @@
-# React + Vite
+# Vatsalya Woman and Child Clinic
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, nurturing, and clean single-page website for **Vatsalya Woman and Child Clinic**, a gynecology and pediatric care facility located on Balmatta Road, Mangaluru.
 
-Currently, two official plugins are available:
+## Features
+- **Nurturing Design**: Soft pastel-themed palette using blush pink / warm coral and sage green accents over a cream/ivory background.
+- **Abstract Vector Illustration**: Embedded custom SVG graphics to convey maternal care without utilizing stock images.
+- **Specialty Segments**: Visually separated service departments for Women's Health (Gynecology, Prenatal, Postnatal, Family Planning) and Child Care (Pediatrics, Vaccination, Growth, Newborns).
+- **Direct Phone Booking**: Simple 3-step walkthrough focusing entirely on direct phone consultation (`+91 94820 62584`).
+- **Responsive Layout**: Fluid CSS design optimized for desktop and mobile, with a dedicated sticky bottom shortcut bar for mobile viewports.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- **Framework**: React 19 (using Vite bundler)
+- **Styling**: Tailwind CSS v4
+- **Icons**: Lucide React
+- **Animations**: motion/react (Framer Motion v12)
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+- Node.js (version 18 or above recommended)
+- npm or yarn
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Chethanshxtty/Vatsalya-Woman-and-Child-Clinic.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Build for production:
+   ```bash
+   npm run build
+   ```
